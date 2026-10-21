@@ -4,7 +4,7 @@ CONTAINER ?= grok-$(shell basename $(PWD))
 
 .PHONY: all
 all:
-	@echo "make <build|create|start|clean>"
+	@echo "make <build|run|clean>"
 
 .PHONY: build
 build:

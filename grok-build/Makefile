@@ -16,6 +16,7 @@ run:
 		--mount type=bind,source=$(HOME)/.grok,target=/home/grok/.grok \
 		--mount type=bind,source=$(PWD),target=/workspace \
 		--name $(CONTAINER) \
+		--env TERM=$(TERM) \
 		--interactive \
 		--tty \
 		--rm \

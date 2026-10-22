@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim AS builder
+FROM debian:trixie-slim AS builder
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl ca-certificates bash findutils \
@@ -6,7 +6,7 @@ RUN apt-get update \
 
 RUN curl -fsSL https://x.ai/cli/install.sh | bash
 
-FROM debian:bookworm-slim AS runner
+FROM debian:trixie-slim AS runner
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates git golang \

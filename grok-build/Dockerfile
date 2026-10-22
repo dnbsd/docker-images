@@ -9,7 +9,7 @@ RUN curl -fsSL https://x.ai/cli/install.sh | bash
 FROM debian:bookworm-slim AS runner
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates git \
+    && apt-get install -y --no-install-recommends ca-certificates git golang \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /usr/local/bin/grok /usr/local/bin/grok
